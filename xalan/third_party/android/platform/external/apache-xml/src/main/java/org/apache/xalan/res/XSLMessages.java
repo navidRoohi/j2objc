@@ -32,42 +32,4 @@ import org.apache.xpath.res.XPATHMessages;
 public class XSLMessages extends XPATHMessages
 {
 
-  /** The language specific resource object for Xalan messages.  */
-  private static ListResourceBundle XSLTBundle = new XSLTErrorResources(); // android-changed
-
-  /**
-   * Creates a message from the specified key and replacement
-   * arguments, localized to the given locale.
-   *
-   * @param msgKey    The key for the message text.
-   * @param args      The arguments to be used as replacement text
-   *                  in the message created.
-   *
-   * @return The formatted message string.
-   */
-  public static final String createMessage(String msgKey, Object args[])  //throws Exception
-  {
-      // BEGIN android-changed
-      //     don't localize resources
-      return createMsg(XSLTBundle, msgKey, args);
-      // END android-changed
-  }
-  
-  /**
-   * Creates a message from the specified key and replacement
-   * arguments, localized to the given locale.
-   *
-   * @param msgKey    The key for the message text.
-   * @param args      The arguments to be used as replacement text
-   *                  in the message created.
-   *
-   * @return The formatted warning string.
-   */
-  public static final String createWarning(String msgKey, Object args[])  //throws Exception
-  {
-      // BEGIN android-changed
-      //     don't localize exception messages
-      return createMsg(XSLTBundle, msgKey, args);
-      // END android-changed
-  }
 }
